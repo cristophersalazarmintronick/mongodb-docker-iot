@@ -24,6 +24,6 @@ services:
     container_name: "mt-mongodb-iot"
     env_file: "./mongodb.env"
     volumes:
-      - ./mongo-volume:/data/db
+      - ./mongo-volume:/home/mongodb/
     ports:
       - "27017-27019:27017-27019"

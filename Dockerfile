@@ -5,3 +5,6 @@ COPY init-mongo.js /docker-entrypoint-initdb.d/
 
 # Set permissions on the database directory
 RUN mkdir -p /data/db && chown -R mongodb:mongodb /data/db
+RUN chown mongodb:mongodb /home/mongodb
+# Expose MongoDB port
+EXPOSE 27017

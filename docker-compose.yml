@@ -15,8 +15,6 @@ services:
     volumes:
       - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
       - ./mongo-volume:/data/db
-    command: >
-      bash -c "mkdir -p /home/mongodb && chown -R mongodb:mongodb /home/mongodb"
     ports:
       - "27017-27019:27017-27019"
   # database:

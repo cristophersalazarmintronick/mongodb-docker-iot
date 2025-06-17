@@ -13,9 +13,8 @@ services:
     container_name: "mt-mongodb-iot"
     env_file: "./mongodb.env"
     volumes:
-      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
       - ./mongo-volume:/data/db
-      - ./home/mongodb:/home/mongodb
     ports:
       - "27017-27019:27017-27019"
   # database:
